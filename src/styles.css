@@ -1,0 +1,59 @@
+body {
+  background-color: #c6c5b9;
+}
+.grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-areas:
+    "one two"
+    "observable observable"
+    "three four";
+  grid-template-columns: null;
+  grid-template-rows: null;
+  row-gap: 10%;
+  column-gap: 10%;
+  align-items: center;
+  justify-items: center;
+}
+.grid .subscription {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 48px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+.grid .subscription.subscribed {
+  transition-property: width height;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+  width: 200px;
+  height: 200px;
+}
+.grid .subscription#one {
+  position: relative;
+  grid-area: one;
+  background-color: #62929e;
+}
+.grid .subscription#two {
+  grid-area: two;
+  background-color: #4a6d7c;
+}
+.grid .subscription#three {
+  grid-area: three;
+  background-color: #5a7d7c;
+}
+.grid .subscription#four {
+  grid-area: four;
+  background-color: #708d81;
+}
+.grid #observable {
+  grid-area: observable;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 48px;
+}
